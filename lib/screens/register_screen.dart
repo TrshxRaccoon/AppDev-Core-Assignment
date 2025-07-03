@@ -34,7 +34,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
 
     if (registerResponse.statusCode == 201) {
-      // Registration successful, now perform login
       final loginUrl = Uri.parse('http://localhost:3000/api/user/login');
       final loginResponse = await http.post(
         loginUrl,
