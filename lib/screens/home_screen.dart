@@ -176,19 +176,18 @@ class _HomeScreen extends State<HomeScreen> {
                       return Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 8.0),
-                            child: Text(
-                              DateFormat(
-                                'EEEE, MMM dd',
-                              ).format(DateTime.parse(key)),
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                color: ThemeColors.textPrimary,
-                              ),
+                          Padding(padding: EdgeInsets.symmetric(vertical: 8.0)),
+                          Text(
+                            DateFormat(
+                              'EEEE, MMM dd',
+                            ).format(DateTime.parse(key)),
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: ThemeColors.textPrimary,
                             ),
                           ),
+                          Divider(color: ThemeColors.textPrimary, thickness: 1),
                           ...tasks.map((task) {
                             final isCompleted =
                                 (task['status']?.toString().toLowerCase() ??

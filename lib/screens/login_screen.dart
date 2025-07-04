@@ -50,7 +50,7 @@ class _LoginScreen extends State<LoginScreen> {
     } else {
       final error = jsonDecode(response.body)['message'] ?? 'Login failed';
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(error), duration: const Duration(seconds: 2)),
+        SnackBar(content: Text(error), duration: Duration(seconds: 2)),
       );
     }
   }

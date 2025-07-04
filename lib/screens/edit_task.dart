@@ -58,7 +58,7 @@ class _EditTaskScreenState extends State<EditTaskScreen> {
     } else {
       setState(() => _isSubmitting = false);
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Failed to update task')),
+        SnackBar(content: Text('Failed to update task')),
       );
     }
   }
@@ -84,7 +84,7 @@ class _EditTaskScreenState extends State<EditTaskScreen> {
               color: ThemeColors.textPrimary,
             ),
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
           TextField(
             controller: _titleController,
             decoration: InputDecoration(
@@ -97,7 +97,7 @@ class _EditTaskScreenState extends State<EditTaskScreen> {
               ),
             ),
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
           TextField(
             controller: _descriptionController,
             maxLines: 3,
@@ -111,9 +111,9 @@ class _EditTaskScreenState extends State<EditTaskScreen> {
               ),
             ),
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: 20),
           _isSubmitting
-              ? const Center(child: CircularProgressIndicator())
+              ? Center(child: CircularProgressIndicator())
               : SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
@@ -122,7 +122,7 @@ class _EditTaskScreenState extends State<EditTaskScreen> {
                       backgroundColor: ThemeColors.accent,
                       foregroundColor: ThemeColors.textPrimary,
                     ),
-                    child: const Text('Save Changes'),
+                    child: Text('Save Changes'),
                   ),
                 ),
         ],

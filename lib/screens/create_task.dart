@@ -46,7 +46,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
     } else {
       setState(() => _isSubmitting = false);
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Failed to add task')),
+        SnackBar(content: Text('Failed to add task')),
       );
     }
   }
@@ -79,7 +79,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
               color: ThemeColors.textPrimary,
             ),
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
           TextField(
             controller: _titleController,
             decoration: InputDecoration(
@@ -93,7 +93,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
               ),
             ),
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
           TextField(
             controller: _descriptionController,
             maxLines: 3,
@@ -108,9 +108,9 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
               ),
             ),
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: 20),
           _isSubmitting
-              ? const Center(child: CircularProgressIndicator())
+              ? Center(child: CircularProgressIndicator())
               : SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
@@ -119,7 +119,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                       backgroundColor: ThemeColors.accent,
                       foregroundColor: ThemeColors.textPrimary,
                     ),
-                    child: const Text('Add'),
+                    child: Text('Add'),
                   ),
                 ),
         ],
